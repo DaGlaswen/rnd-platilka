@@ -1,10 +1,9 @@
+import sys
+
 import uvicorn
 from loguru import logger
-import sys
-import os
 
-from .api import app
-from .settings import settings
+from settings import settings
 
 
 def setup_logging():
@@ -34,7 +33,7 @@ def main():
     setup_logging()
 
     logger.info("Запуск Platilka Hotel Booking Service")
-    logger.info(f"Настройки: {settings.dict()}")
+    # logger.info(f"Настройки: {Settings.dict()}")
 
     # Проверяем обязательные переменные окружения
     if not settings.groq_api_key:

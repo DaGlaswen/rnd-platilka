@@ -1,7 +1,8 @@
-from pydantic import BaseModel, Field, validator
-from typing import Optional, List, Literal
-from datetime import datetime, date
+from datetime import date
 from enum import Enum
+from typing import Optional, List, Literal
+
+from pydantic import BaseModel, Field, validator
 
 
 class PaymentMethod(str, Enum):

@@ -6,7 +6,7 @@ authors = [
     {name = "glaswennn", email = "golovinov.daniel@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11.0"
+requires-python = "==3.11.12"
 dependencies = [
     "playwright>=1.52.0,<2.0.0",
     "loguru",
@@ -32,9 +32,6 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "platilka", from = "src"}]
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 100

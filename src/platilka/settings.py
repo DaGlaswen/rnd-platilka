@@ -1,12 +1,18 @@
-from pydantic_settings import BaseSettings
+import os
 from typing import Optional
+
+from pydantic_settings import BaseSettings
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Settings(BaseSettings):
     """Настройки приложения"""
 
     # API ключи
-    groq_api_key: str
+    groq_api_key: str = os.getenv("GROQ_API_KEY")
 
     # Настройки браузера
     browser_headless: bool = True
@@ -14,14 +20,14 @@ class Settings(BaseSettings):
     page_load_timeout: int = 10000  # 10 секунд
 
     # Настройки поиска
-    max_search_results: int = 10
+    max_search_results: int = 3
     search_timeout: int = 120  # 2 минуты
 
     # Настройки бронирования
     booking_timeout: int = 300  # 5 минут
 
     # Настройки LLM
-    llm_temperature: float = 0.1
+    llm_temperature: float = 0.05
     llm_model: str = "meta-llama/llama-4-scout-17b-16e-instruct"
     llm_max_retries: int = 3
 

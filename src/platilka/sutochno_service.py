@@ -1,13 +1,12 @@
-import asyncio
-from typing import List, Optional, Dict, Any
-from datetime import date
-from loguru import logger
+from typing import List, Optional, Any
+
 from browser_use import Agent, Browser
 from langchain_groq import ChatGroq
+from loguru import logger
 
 from .models import (
     BookingRequest, HotelInfo, HotelRecommendations,
-    BookingResult, SearchStatus, HotelAmenity
+    BookingResult
 )
 from .settings import settings
 
@@ -27,15 +26,8 @@ class SutochnoService:
     async def __aenter__(self):
         """Асинхронный контекстный менеджер - вход"""
         self.browser = Browser(
-            headless=settings.browser_headless,
-            timeout=settings.browser_timeout
-        )
-        await self.browser.start()
-
-        self.agent = Agent(
-            task="",  # Будет устанавливаться для каждой задачи
-            llm=self.llm,
-            browser=self.browser
+            # headless=settings.browser_headless,
+            # timeout=settings.browser_timeout
         )
 
         return self
@@ -44,6 +36,13 @@ class SutochnoService:
         """Асинхронный контекстный менеджер - выход"""
         if self.browser:
             await self.browser.close()
+
+    async def init_agent_with_task(self, task: str):
+        self.agent = Agent(
+            task=task,
+            llm=self.llm,
+            browser=self.browser
+        )
 
     async def search_hotels(self, booking_request: BookingRequest) -> HotelRecommendations:
         """
@@ -58,23 +57,33 @@ class SutochnoService:
         logger.info(f"Начинаем поиск отелей для города {booking_request.city}")
 
         # Формируем URL для поиска
-        search_url = self._build_search_url(booking_request)
-        logger.info(f"URL поиска: {search_url}")
+        # search_url = self._build_search_url(booking_request)
+        # logger.info(f"URL поиска: {search_url}")
 
         # Задача для агента
         search_task = f"""
-        Перейди на сайт {search_url} и найди отели для бронирования.
+        
+        Шаг 1:
+        Перейди на сайт {settings.sutochno_base_url} и найди отели для бронирования.
 
-        Параметры поиска:
+        Шаг 2:
+        Введи следующие параметры поиска:
         - Город: {booking_request.city}
         - Дата заезда: {booking_request.check_in}
         - Дата выезда: {booking_request.check_out}
         - Количество гостей: {booking_request.guests_count}
 
-        Задачи:
-        1. Убедись, что страница загрузилась
-        2. Найди все объекты размещения на странице
-        3. Для каждого объекта извлеки:
+        Шаг 3: 
+        Дождись прогрузки страницы с результатами
+        
+        Шаг 4:
+        Заполни и примени фильтр 'Цена за сутки' значениями от '{booking_request.min_price}' до '{booking_request.max_price}'
+        
+        Шаг 5:
+        Дождись пока страница обновится после применения фильтра 
+        
+        Шаг 6:
+        Пройдись в цикле по первым 5 результатам поиска. Для каждого объекта зайди на его страницу и извлеки:
            - Название
            - Цену за ночь
            - Общую стоимость
@@ -83,19 +92,20 @@ class SutochnoService:
            - Адрес
            - Количество комнат/гостей
            - Удобства
-           - Наличие бесплатной отмены
            - Ссылку на объект
            - URL первой фотографии
-
-        4. ВАЖНО: Показывай только те объекты, у которых есть опция "Бесплатная отмена"
-        5. Ограничь результат {settings.max_search_results} лучшими вариантами
+           
+        При необходимости мотай страницу вниз
+    
+        Шаг 7:
+        Ограничь результат {settings.max_search_results} лучшими вариантами
 
         Верни результат в формате JSON со списком найденных объектов.
         """
 
         try:
             # Устанавливаем задачу агенту
-            self.agent.task = search_task
+            await self.init_agent_with_task(search_task)
 
             # Выполняем поиск
             result = await self.agent.run()
@@ -190,12 +200,14 @@ class SutochnoService:
 
     def _build_search_url(self, booking_request: BookingRequest) -> str:
         """Строит URL для поиска на sutochno.ru"""
-        base_url = f"{settings.sutochno_base_url}/{booking_request.city.lower()}"
+        base_url = f"{settings.sutochno_base_url}"
 
         params = [
-            f"checkin={booking_request.check_in.strftime('%Y-%m-%d')}",
+            f"term{booking_request.city}",
+            f"price_per{booking_request.guests_county}",
+            f"occupied={booking_request.check_in.strftime('%Y-%m-%d')};{booking_request.check_out.strftime('%Y-%m-%d')}",
             f"checkout={booking_request.check_out.strftime('%Y-%m-%d')}",
-            f"guests={booking_request.guests_count}"
+            f"guests_adults={booking_request.guests_count}"
         ]
 
         # Добавляем фильтры если есть

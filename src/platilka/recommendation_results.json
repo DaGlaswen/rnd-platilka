@@ -1,0 +1,144 @@
+{
+  "hotels": [
+    {
+      "title": "Гостиница«На Крымской»",
+      "price": 3200,
+      "rating": 9.4,
+      "reviews": 1092,
+      "address": "Москва, Севастопольский проспект,7к7",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1772911?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/OQ-15a-xHceq16YepY4NLan2XWH7apSfTL8l1BCLfmU/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS83NzIvOTExLzY3NWFhODAxZGVlNjAuanBn.webp"
+    },
+    {
+      "title": "Отель«Arium»",
+      "price": 9600,
+      "rating": 9.7,
+      "reviews": 9.555,
+      "address": "Москва, Малая Дмитровка улица,25с3",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1449539?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/pVXh7zcZ-ktr-rmBUhsMQmtlCJ2rtsx9NI_1094c2Cg/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS83NzIvOTExLzY2NGU3ODE4YmM1YWUuanBn.webp"
+    },
+    {
+      "title": "Отель«Измайлово Гамма Твой Отель»",
+      "price": 4800,
+      "rating": 9.6,
+      "reviews": 9.537,
+      "address": "Москва, Измайловское шоссе,71к4Г-Д",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1025699?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/Y-denqsprH-mu8fc8yYy_agrUXijJ1KN5-q5ArHreq8/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS82NTMvNjUyLzY2MjN2MWVkOGVjYy5qcGc.webp"
+    },
+    {
+      "title": "Гостевой дом«На Добрынинской»",
+      "price": 3590,
+      "rating": 9.8,
+      "reviews": 9.612,
+      "address": "Москва, Люсиновская улица,11/12с1",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1728781?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/L_WrjObKovp4oXb_OtZOS2ecachcycN5dz-0dfzqhtA/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS83NjMvNjcyLzY3NWFhMjcwMjE5NDYuanBn.webp"
+    },
+    {
+      "title": "Гостиница«На Крымской»",
+      "price": 3600,
+      "rating": 9.4,
+      "reviews": 9.210,
+      "address": "Москва, Севастопольский проспект,7к7",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1763672?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/4YEis46r05nD0UvForLfy_GeJ7Zx73lpXbuUx8QbqY4/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS80NDkvNTMxLzY0MTA0ZGY2MTNiODguanBn.webp"
+    },
+    {
+      "title": "Отель«Arium»",
+      "price": 9600,
+      "rating": 9.7,
+      "reviews": 9.555,
+      "address": "Москва, Малая Дмитровка улица,25с3",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1449531?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/pVXh7zcZ-ktr-rmBUhsMQmtlCJ2rtsx9NI_1094c2Cg/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS83NzIvOTExLzY2NGU3ODE4YmM1YWUuanBn.webp"
+    },
+    {
+      "title": "Отель«Сити на Ленинградском»",
+      "price": 7440,
+      "rating": 9.9,
+      "reviews": 9.750,
+      "address": "Москва, Ленинградский проспект,47с2",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1409209?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/WUaCsxt3RxewB5EJvGzl_RCjuCmX2SI-SwLc9DVqap8/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS84MjUvOTY2LzY2OGI5MDIzZTFmYjcucG5n.webp"
+    },
+    {
+      "title": "Отель«Norke Prime Зарядье»",
+      "price": 7350,
+      "rating": 9.5,
+      "reviews": 9.390,
+      "address": "Москва, Подколокольный переулок,8с6",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1825966?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/WUaCsxt3RxewB5EJvGzl_RCjuCmX2SI-SwLc9DVqap8/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS84MjUvOTY2LzY2OGI5MDIzZTFmYjcucG5n.webp"
+    },
+    {
+      "title": "Апартаменты«LikeHome life - Спартак»",
+      "price": 7420,
+      "rating": 9.5,
+      "reviews": 9.250,
+      "address": "Москва, Волоколамское шоссе,71/22к1",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1522389?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/ejrcGU4wPgwkxYZtfVSqp0U1UJ2AKyVF_Tu7ZkfCBsI/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS81MC85MTEvNjM5ZmU4MDBjMzhiYy5qcGVn.webp"
+    },
+    {
+      "title": "Отель«Измайлово Гамма Твой Отель»",
+      "price": 5200,
+      "rating": 9.6,
+      "reviews": 9.537,
+      "address": "Москва, Измайловское шоссе,71к4Г-Д",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1050911?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/Dr4KX6SZh6bZNk4mwZ1bOcJdWc6o69zuynbQjxO_4sQ/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS83NzIvOTE3LzY3NWFhOGM5NWE5MzIuanBn.webp"
+    },
+    {
+      "title": "Отель«Presnya rooms»",
+      "price": 5780,
+      "rating": 9.9,
+      "reviews": 9.710,
+      "address": "Москва, Малая Грузинская улица,3-9",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1868862?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/UP08RiqFWxn_pLba7x82Ets_oGaSBLTibdNB3CtnZvU/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS84MTAvMTUyLzY2OWQyOWY3ODM4MjMuanBn.webp"
+    },
+    {
+      "title": "Суперхозяин 2Гостиница«На Крымской»",
+      "price": 3700,
+      "rating": 9.4,
+      "reviews": 9.210,
+      "address": "Москва, Севастопольский проспект,7к7",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1772917?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/FB9fuDD0RhotcGURCf0BGXKYnvauhjN9g5pZ5BRdyCE/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS84NjgvODYyLzY3MWJjMDA4ODRlNDcuanBn.webp"
+    },
+    {
+      "title": "СуперхозяинОтель«Presnya rooms»",
+      "price": 780,
+      "rating": 9.7,
+      "reviews": 9.710,
+      "address": "Москва, Малая Грузинская улица,3-9",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/1868862?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/UP08RiqFWxn_pLba7x82Ets_oGaSBLTibdNB3CtnZvU/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS84MTAvMTUyLzY2OWQyOWY3ODM4MjMuanBn.webp"
+    },
+    {
+      "title": "СуперхозяинОтель«Арион»",
+      "price": 5700,
+      "rating": 9.7,
+      "reviews": 9.759,
+      "address": "Москва, Автозаводская улица,1",
+      "amenities": [],
+      "link": "https://sutochno.ru/front/searchapp/detail/933805?id=397366&term=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&guests_adults=1&occupied=2025-05-21;2025-05-22&price_per=1&SW.lat=55.62469366781962&SW.lng=37.21595882903728&NE.lat=55.851124074780216&NE.lng=38.014184231869315&type=city&price=2000,10000&showMap=true&isShowMetro=1",
+      "photo_url": "https://i.sutochno.ru/FZIO9HBQmZP11isEqFc5sR_6ZjUUXiePM24qmeu0Odo/rs:fill:236:210:0/g:ce/aHR0cHM6Ly9zdGF0aWMuc3V0b2Nobm8ucnUvZG9jL2ZpbGVzL29iamVjdHMvMS80MDkvMjA5LzY2YmRhMzFmM2VjZTIuanBn.webp"
+    }
+  ]
+}
