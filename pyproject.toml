@@ -26,7 +26,8 @@ dependencies = [
     "httpx",
     "asyncio-mqtt",
     "aiofiles",
-    "typing-extensions"
+    "typing-extensions",
+    "requests (>=2.32.3,<3.0.0)"
 ]
 
 [tool.poetry]
