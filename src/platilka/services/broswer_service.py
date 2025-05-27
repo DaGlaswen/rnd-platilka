@@ -150,7 +150,7 @@ class BrowserService:
             except json.JSONDecodeError as e:
                 logger.error(f"Ошибка парсинга JSON результата: {str(e)}")
                 logger.debug(f"Результат агента: {result}")
-                raise e
+                raise
 
         except Exception as e:
             logger.error(f"Ошибка при извлечении информации о товаре с {url}: {str(e)}")
@@ -169,24 +169,28 @@ class BrowserService:
         """
         logger.info(f"Извлечение информации о товарах с {len(urls)} страниц")
 
+        products: List[Product] = []
+
         # Ограничиваем количество одновременных запросов
-        # semaphore = asyncio.Semaphore(3)
+        semaphore = asyncio.Semaphore(1)
 
         async def extract_single_product(url: str) -> Optional[Product]:
-            try:
+            async with semaphore:
                 return await self.extract_product_info(url, request)
-            except Exception as e:
-                logger.error(f"Ошибка при обработке URL {url}: {str(e)}")
-                return None
 
-        # Создаем и запускаем все задачи одновременно
+        # Запускаем извлечение информации параллельно
         tasks = [extract_single_product(url) for url in urls]
-        results = await asyncio.gather(*tasks, return_exceptions=False)
+        results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        # Фильтруем None результаты (которые возникли из-за ошибок)
-        products = [product for product in results if product is not None]
+        # Обрабатываем результаты
+        result: BaseException | Optional[Product]
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                logger.error(f"Ошибка при обработке URL {urls[i]}: {str(result)}")
+            elif result is not None:
+                products.append(result)
 
-        logger.info(f"Успешно извлечена информация о {len(products)} товарах из {len(urls)}")
+        logger.info(f"Успешно извлечена информация о {len(products)} товарах")
         return products
 
     def _extract_marketplace_name(self, url: str) -> str:
